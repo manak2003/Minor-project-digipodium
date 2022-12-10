@@ -1,0 +1,261 @@
+{% extends 'layout/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<div class="container">
+<div class="col-md-4">
+                
+    {% if user.is_authenticated %}
+    Welcome
+    {% if request.session.is_student %}
+    Student {{user.username}}
+    
+    <p>
+        {{user.student.course}}
+    </p>
+    <p>
+        {{user.student.stream}}
+    </p>
+    <p>
+        {{user.student.roll_no}}
+    </p>
+    <p>
+        {{user.student.phone}}
+    </p>
+    <p>
+        {{user.student.city}}
+    </p>
+    <p>
+        {{user.student.passing_year}}
+    </p>
+    
+    {% endif %}
+    You are logged in.
+    {% else %}
+    You should login
+    {% endif %}
+    
+</div>
+</div>
+
+
+
+<div class="card text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-4">
+                <h2>Jobs listing</h2>
+                <div class="container-fluid">
+                    <div class="column">
+                        <div class="card" id="topr">
+                            <div class="card-body">
+                                <h4 class="card-title text-black ml-4"  align="left">Top Results</h4>
+                            </div>
+                        </div>
+                        {% for job in jobs %}
+                        <div class="col-md-4" id="col-md-4">
+                            
+                            <div class="card">
+                                <div class="card-body" align="left" id="card-body"> 
+
+                                    
+                                    <h4 class="card-title mx-4">Job at {{job.company_name}}</h4>
+                                    <h5 class="card-text mx-3">{{job.job_title}}</h5><br>
+                                    <p class="card-text mx-3">
+                                        {{job.job_description}}
+                                    </p>
+                                    <p class="card-text mx-3">
+                                        {{job.job_requirements}}
+                                    </p>
+                                    <p class="card-text mx-3">
+                                        Salary will be {{job.what_is_the_pay}} p.a
+                                    </p>
+                                    <a href="{% url 'application' %}">Apply Job</a>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        {% empty %}
+                        <div class="alert alert-danger" role="alert" style="width: 1400px;">
+                            <strong>No Jobs Available</strong> Check back tomorrow.
+                        </div>
+                        
+                        {% endfor %}
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
+    
+<footer class="footer">
+    <div class="container-footer">
+      <div class="row" id="roow">
+        <div class="footer-col">
+          <h4>Alquiler</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">help & support</a></li>
+            <li><a href="#">get verified</a></li>
+            <li><a href="#">terms and conditions</a></li>
+            <li><a href="#">copyright policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Create websites</a></li>
+            <li><a href="#">security</a></li>
+            <li><a href="#">engage your audience</a></li>
+            <li><a href="#">website support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </footer>
+  
+    {% endblock content %}
+    
+    
+    {% block css %}
+    <style>
+       
+   
+              
+            
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container-footer{
+        max-width: 1170px;
+      
+        margin: auto;
+      }
+      .roow{
+        display: flex;
+        flex-wrap:wrap ;
+      }
+      ul{
+        list-style: none;
+      }
+      .footer{
+        background-color: #24262b;
+        padding: 70px 0;
+      }
+      .footer-col{
+        width: 25%;
+        padding: 0 15px;
+      }
+      .footer-col h4{
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+      }
+      .footer-col h4::before{
+        content:'';
+        position: relative;
+        left: 0;
+        bottom: -10px;
+        background-color: #e91e63;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+      }
+      .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+      }
+      .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s (ease);
+      }
+      .footer-col ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+      }
+      .footer-col .social-links a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255,255,255,0.2);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s (ease);
+      }
+      .footer-col .social-llinks a:hover{
+         color: #24262b;
+         background-color: #ffffff;
+      }
+      /*responsive*/
+      @media(max-width:767px){
+        .footer-col{
+          width: 50%;
+          margin-bottom: 30px;
+        }
+      }
+      
+      @media(max-width:574px){
+        .footer-col{
+          width: 100%;
+         
+        }
+      }
+      
+      
+
+
+            #col-md-4{
+                
+                width: 1400px;
+                color: black;
+
+            }
+            #card-body{
+                
+                margin: 0.5rem;
+            }
+            #topr{
+                height:3.6rem ;
+                width:1400px;
+              
+            }
+
+    </style>
+    {% endblock css %}
+    
+    
+    {% block js %}{% endblock js %}
+    

@@ -1,0 +1,275 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %}
+<section id="third">
+  
+
+<div class="container">
+   <div class="row" id="solu">
+    <div class="col-5" id="hsol">
+      <img src="{% static 'images/cartoon-light-bulb-2BWXMP9.jpg' %}" class="w-100 d-block" >
+    </div>
+    <div class="col-5" id="ahs" alig="center"><h1>Alquiler Hiring Solutions</h1>
+    </div>
+   </div>
+   </div>
+   <hr>
+
+
+   <div class="row " id="card-des">
+     <div class="col-4" >
+       <div class="card" id="col-des">
+         <div class="card-body">
+           <h3 class="card-title">Hire with Confidence
+            and Speed</h3><br>
+           <p class="card-text">Create a 100% digital hiring experience to speed time to hire, improve quality of hire, and lower cost per hire.</p>
+         </div>
+       </div>
+     </div>
+     <div class="col-4" >
+       <div class="card" id="col-des">
+         <div class="card-body">
+           <h3 class="card-title">Gain a 360° View
+            of Talent</h3><br>
+           <p class="card-text">Add intelligence to your talent lifecycle and make equitable, data-driven talent decisions.</p>
+         </div>
+       </div>
+     </div>
+     <div class="col-4" >
+       <div class="card" id="col-des">
+         <div class="card-body">
+           <h3 class="card-title">Unify Your
+            Processes</h3><br>
+           <p class="card-text">Orchestrate the process to screen, interview, and assess top candidates and learners.</p>
+         </div>
+       </div>
+     </div>
+     <div class="col-4" >
+       <div class="card" id="col-des">
+         <div class="card-body">
+           <h3 class="card-title">Grow and Scale
+            Your Hiring</h3><br>
+           <p class="card-text">Reimagine your large-scale hiring with the most flexible and configurable solution.</p>
+         </div>
+       </div>
+     </div>
+     <div class="col-4" >
+       <div class="card" id="col-des">
+         <div class="card-body">
+           <h3 class="card-title">Partner with a
+            World-Class Team</h3><br>
+           <p class="card-text">Ensure your configuration and integrations go smoothly from the beginning to end with our world-class support and services team. </p>
+         </div>
+       </div>
+     </div>
+     <div class="col-4" >
+       <div class="card" id="col-des">
+         <div class="card-body">
+           <h3 class="card-title">Safeguard Data and
+            Privacy for All </h3><br>
+           <p class="card-text">Safeguard data and privacy of all customers and candidates by complying with global laws and industry best practices. </p>
+         </div>
+       </div>
+     </div>
+   </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container-footer">
+    <div class="row" id="roow">
+      <div class="footer-col">
+        <h4>Alquiler</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">help & support</a></li>
+          <li><a href="#">get verified</a></li>
+          <li><a href="#">terms and conditions</a></li>
+          <li><a href="#">copyright policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#">Create websites</a></li>
+          <li><a href="#">security</a></li>
+          <li><a href="#">engage your audience</a></li>
+          <li><a href="#">website support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+{% endblock content %}
+    
+
+{% block css %}
+    <style>
+       
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container-footer{
+        max-width: 1170px;
+      
+        margin: auto;
+      }
+      .roow{
+        display: flex;
+        flex-wrap:wrap ;
+      }
+      ul{
+        list-style: none;
+      }
+      .footer{
+        background-color: #24262b;
+        padding: 70px 0;
+      }
+      .footer-col{
+        width: 25%;
+        padding: 0 15px;
+      }
+      .footer-col h4{
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+      }
+      .footer-col h4::before{
+        content:'';
+        position: relative;
+        left: 0;
+        bottom: -10px;
+        background-color: #e91e63;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+      }
+      .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+      }
+      .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s (ease);
+      }
+      .footer-col ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+      }
+      .footer-col .social-links a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255,255,255,0.2);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s (ease);
+      }
+      .footer-col .social-llinks a:hover{
+         color: #24262b;
+         background-color: #ffffff;
+      }
+      /*responsive*/
+      @media(max-width:767px){
+        .footer-col{
+          width: 50%;
+          margin-bottom: 30px;
+        }
+      }
+      
+      @media(max-width:574px){
+        .footer-col{
+          width: 100%;
+         
+        }
+      }
+      
+      
+
+
+            #hsol{
+              height: 10rem;
+              width: 10rem;
+            }
+            .container{
+              height: 15rem;
+              
+              padding: 3rem;
+            }
+            
+            #ahs{
+              margin-top: 3rem;
+              margin-left: 5rem;
+              font-size: x-large;
+            }
+
+            #card-des{
+              margin-left: 8rem;
+              margin-right: 8rem;
+              padding: 1rem;
+              margin-top: 1rem;
+            }
+            #col-des{
+              margin: 1rem;
+              padding: 0.6rem;
+              height: 15rem;
+              width: 28rem;
+             
+              border-radius: 3rem;
+              scale: 1;
+              transition: all 250ms ease ;
+            }
+            #col-des:hover{
+              box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            transition: 450ms;
+            transform:  scale(1.1) ;
+            }
+
+            hr { 
+              display: block;
+              margin-top: 5em;
+              margin-bottom: 5em;
+              margin-left: 15rem;
+              margin-right: 15rem;
+              border-style: inset;
+              border-width: 5px;
+            }
+    </style>
+{% endblock css %}
+
+{% block js %}  {% endblock js %}

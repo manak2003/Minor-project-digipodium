@@ -1,0 +1,52 @@
+{% extends 'layout/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+    
+
+
+
+<div class="container">
+    <div class="row justify-content-center align-items-center 100h pt-5">
+        <div class="col-lg-8 ">
+            <div class="card mb-3 border-0 rounded-3  ">
+                <div class="row g-0">
+                    <div class="col-md-4 rounded-start mx-auto d-flex align-items-center">
+                    </div>
+                    <div class="col-md-8 py-5">
+                        
+                            <h3>Create an Employer account  and post a job🥷</h3>
+                            <form method="POST">
+                                {% csrf_token %}
+                                {% bootstrap_form form %}
+
+    
+                                {% bootstrap_button "Save and Continue" type="submit" %}
+                            </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
+<script>
+    var triggerEl = document.querySelector('#navId a')
+    bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+</script>
+
+{% endblock content %}
+    
+
+{% block css %}
+    
+{% endblock css %}
+
+
+{% block js %}
+    
+{% endblock js %}
+

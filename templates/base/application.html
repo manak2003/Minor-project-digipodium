@@ -1,0 +1,80 @@
+{% extends 'layout/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+  
+<div class="container">
+    {% if user.is_authenticated %}
+    Welcome
+    {% if request.session.is_student %}
+    student {{user.username}}
+    
+    <p>
+        {{user.apply.apply}}
+    </p>
+    
+    {% endif %}
+    you have applied for job
+    {% else %}
+    You should login
+    {% endif %}
+</div>
+<hr>
+
+<body id="third">
+    <div class="col-md-8" id="med">                  
+        <h3>Apply for the Job here 🥷</h3>
+        <form method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% bootstrap_button "Apply" type="submit" %}
+        </form>
+    </div>
+    </body>
+
+
+{% endblock content %}
+    
+
+{% block css %}
+<style>
+    #third{
+            background: linear-gradient(120deg,#2980b9,#8e44ad);
+            height: 142vh;
+            margin: 0;
+            padding: 0;  
+        }
+    #med{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       width: 600px;
+       height: 1100px;
+       margin-top: 17rem;
+       background:white ;
+       border-radius:10px ;
+    
+    }
+    
+    #med h3{
+        margin-top: 1.6rem;
+        text-align: center;
+        padding: 0 0 20px 0;
+        border-bottom: 1px solid silver;
+    }
+    #med form{
+        padding: 0 40px;
+        box-sizing: border-box;
+        height: 22rem;
+    }
+    </style>
+    
+ 
+{% endblock css %}
+    
+
+{% block js %}
+    
+{% endblock js %}
+    

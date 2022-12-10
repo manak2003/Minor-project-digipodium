@@ -1,0 +1,252 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section id="sec">
+  <img src="{% static 'images/960x0.jpg' %}" alt="Snow" style="width:100%;" id="snow">
+  <div class="text-block">
+    <h1 class="mt-4">
+      Our Mission
+  </h1>
+  <h5>We believe that every person deserves the right to realize their full potential professionally.</h5>
+  
+  </div>
+</section>
+
+
+
+
+
+
+<div class="container" id="ccl">
+  <h2 align="center">About Alquiler</h2>
+  <p>We are dedicated to providing organizations with digital tools to make more efficient, informed decisions throughout the lifecycle of their talent, from recruiting to credentialing. Our AI-powered Measurement Platform reduces bias with intelligent insights, enabling data-driven decisions, and providing an equal opportunity for all</p>
+  <br>
+  <p>We help you measure potential. Confidently.</p>
+</div>
+<hr>
+<div class="container" id="hcl">
+  <h2 align="center">Our Story</h2>
+  <p>As classmates at the Indian Institute of Technology, Bombay (IIT B) in 2011, Sanjoe Tom Jose and Mani Ka recognized the value of using video during the interview process. At that time, the duo conducted mock interviews, which were manual, in-person, and time-intensive for both interviewers and candidates, and saw fast growing penetration of smartphones and the internet as catalyst for a change in the way organizations hire.</p>
+  <br>
+  <br>
+  <p>What began as an idea of video interviewing soon led to the duo coming together with Tom Jose, a KPMG management consultant, and Jobin Jose, an engineer with experience in audio-video technologies to form Interview Master, a video interviewing tool.</p>
+  <br><br>
+  <p>In 2017, three of the original founders transitioned the company into Talview Inc. Talview was founded on the notion that every person deserves an equal footing academically and professionally, which could be achieved with AI-powered solutions for hiring and assessments.</p>
+  <br><br>
+  <p>Starting with “Instahiring” – the company’s concept that time to hire is the key metric to address recruiting and hiring challenges for HR and TA leaders, Talview expanded to offer remote and live proctoring solutions to ensure integrity during the exam, test, and certification process.</p>
+  <br><br>
+  <p>Together, Talview partners with our customers worldwide to focus on what matters most - enabling candidates and learners to succeed to their fullest potential.</p>
+  <br><br>
+</div>
+
+<hr>
+
+
+    
+<footer class="footer">
+  <div class="container-footer">
+    <div class="row" id="roow">
+      <div class="footer-col">
+        <h4>Alquiler</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">help & support</a></li>
+          <li><a href="#">get verified</a></li>
+          <li><a href="#">terms and conditions</a></li>
+          <li><a href="#">copyright policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#">Create websites</a></li>
+          <li><a href="#">security</a></li>
+          <li><a href="#">engage your audience</a></li>
+          <li><a href="#">website support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+{% endblock content %}
+
+
+{% block css %}
+    <style>
+   
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container-footer{
+        max-width: 1170px;
+      
+        margin: auto;
+      }
+      .roow{
+        display: flex;
+        flex-wrap:wrap ;
+      }
+      ul{
+        list-style: none;
+      }
+      .footer{
+        background-color: #24262b;
+        padding: 70px 0;
+      }
+      .footer-col{
+        width: 25%;
+        padding: 0 15px;
+      }
+      .footer-col h4{
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+      }
+      .footer-col h4::before{
+        content:'';
+        position: relative;
+        left: 0;
+        bottom: -10px;
+        background-color: #e91e63;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+      }
+      .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+      }
+      .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s (ease);
+      }
+      .footer-col ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+      }
+      .footer-col .social-links a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255,255,255,0.2);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s (ease);
+      }
+      .footer-col .social-llinks a:hover{
+         color: #24262b;
+         background-color: #ffffff;
+      }
+      /*responsive*/
+      @media(max-width:767px){
+        .footer-col{
+          width: 50%;
+          margin-bottom: 30px;
+        }
+      }
+      
+      @media(max-width:574px){
+        .footer-col{
+          width: 100%;
+         
+        }
+      }
+      
+      
+
+
+        
+        #abt{
+          height: 40rem;
+          background-color: #FFDEE9;
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
+        }
+       
+        #sec {
+          position: relative;
+        }
+        #snow{
+          height: 25rem;
+        }
+        .text-block {
+          position: absolute;
+          bottom: 100px;
+          left: 40px;
+          background-color: #f8f8f8;
+          background-image: linear-gradient(135deg, #cbd9e2 0%, #d0d1e4 100%);
+          
+          color: rgb(19, 8, 8);
+          padding-left: 20px;
+          padding-right: 20px;
+          margin-top: 1.6rem;
+          height: 10rem;
+          border-radius: 1.6rem;
+          scale: 1;
+              transition: all 250ms ease ;
+        }
+        .text-block:hover{
+          transition: 450ms;
+          transform:  scale(1.05) ;
+        }
+#ccl{
+   margin-top: 2.6rem;
+  padding-top: 1rem;
+}
+
+#hcl{
+  margin-top: 1rem;
+}
+hr { 
+  display: block;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  border-style: inset;
+  border-width: 5px;
+}
+
+    </style>
+{% endblock css %}
+    
+
+{% block js %}
+    
+{% endblock js %}
+    

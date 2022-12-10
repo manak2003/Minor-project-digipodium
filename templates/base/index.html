@@ -1,0 +1,364 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block content %}
+<div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img src="{% static 'images/slide01.jpg'%}" class="w-100 d-block" id="im" alt="First slide">
+            <div class="carousel-caption d-none d-md-block text-white frnt">
+                <h1 class="hed" >Hire the best hard working students.</h1><br>
+                <p class="par">World's largest freelance marketplace<br>
+                    Any job you can possibly think of<br>
+                    Save up to 90% & get quotes for free<br>
+                    Pay only when you're 100% happy</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container1" align="center">
+  <div>
+    <h1 >India's Job Portal</h1><br>
+    <h4>Alquiler helps you hire staff in 2 days</h4>
+    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <img src="{% static 'images/depositphotos_87271034-stock-illustration-two-business-people-shaking-hands.jpg'%}"  id="pho"   alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="row">
+              <div class="col-lg" id="btn2">
+              <a name="btn" id="gab" class="btn btn-danger shadow" href="{% url 'student_register' %}" role="button">Get a Job</a>
+              <a name="btn" id="hn" class="btn btn-danger shadow" href="{% url 'company_register' %}" role="button">Hire Now</a>
+            </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>   <hr>     
+<div class="container-posting mt-4" align="center">
+  <h1>Get Started in <b>3</b> easy steps</h1>
+  <div class="row mt-4" id="posjb">
+    <div class="col-sm-3">
+      <div class="card" id="cd">
+        <img class="card-img-top" id="steps" src="{% static 'images/5396346.jpg'%}" alt="Title">
+        <div class="card-body">
+          <h3 class="card-title">
+            <i class="fa-duotone fa-1"></i>.   Post a job</h3>
+          <p class="card-text">Tell us what you need in a candidate in just 5-minutes</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card" id="cd">
+        <img class="card-img-top" id="steps" src="{% static 'images/8292.jpg'%}"  alt="Title">
+        <div class="card-body">
+          <h3 class="card-title"><i class="fa-duotone fa-2"></i>. Get Verified</h3>
+          <p class="card-text">Our team will call to verify your employer account</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card" id="cd">
+        <img class="card-img-top" id="steps" src="{% static 'images/Charater_business_21.jpg'%}"  alt="Title">
+        <div class="card-body">
+          <h3 class="card-title"><i class="fa-duotone fa-3"></i>. Get calls. Hire.</h3>
+          <p class="card-text">You will get calls from relevant candidates within one hour.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a name="" id="cmp" class="btn btn-primary" href="{% url 'company_register' %}" role="button">POST A JOB</a>
+</div>
+<hr>
+<div class="container-need">
+<h1 style="margin-top: 2.6rem;" align="center">Need something done ?</h1>
+<div class="row mt-4" id="mera">
+    <div class="col-sm-6">
+      <div class="card" id="car">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fa-solid fa-display"></i>    <b>Post a job</b> </h5><br>
+          <p class="card-text">It’s free and easy to post a job. Simply fill in a title, description and budget and competitive bids come within minutes</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card" id="car">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fa-solid fa-person"></i>   <b>We’re here to help</b></h5><br>
+          <p class="card-text">Our talented team of recruiters can help you find the best freelancer for the job and our technical co-pilots can even manage the project for you</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card" id="car">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa-solid fa-house-laptop"></i>  <b>Quality work</b></h5><br>
+            <p class="card-text">Freelancer.com has by far the largest pool of quality freelancers globally- over 50 million to choose from</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card" id="car">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fa-regular fa-clock"></i>  <b>Track progress</b></h5><br>
+            <p class="card-text">Keep up-to-date and on-the-go with our time tracker, and mobile app. Always know what freelancers are up to</p>
+          </div>
+        </div>
+      </div>   
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="container-footer">
+    <div class="row" id="roow">
+      <div class="footer-col">
+        <h4>Alquiler</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">help & support</a></li>
+          <li><a href="#">get verified</a></li>
+          <li><a href="#">terms and conditions</a></li>
+          <li><a href="#">copyright policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#">Create websites</a></li>
+          <li><a href="#">security</a></li>
+          <li><a href="#">engage your audience</a></li>
+          <li><a href="#">website support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+{% endblock content %}
+{% block css %}
+<style>
+  hr { 
+    display: block;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    border-style: inset;
+    border-width: 5px;
+  }
+
+
+  .container-posting{
+    
+    margin: 2.6rem;
+    padding: 1rem;
+  }
+
+  #posjb{
+   
+    padding: 3.6rem;
+  }
+
+  #steps{
+    height: 20rem;
+  }
+  #cd{
+    height: 25rem;
+    width: 20rem;
+    margin-left:12rem ;
+    padding: 1rem;
+  }
+
+
+  #pho{
+    height: 20rem;
+    width: 45rem;
+  }
+ 
+  #btn2{
+    margin: 1.6rem;
+    padding: 2rem;
+    font-size: 15rem;
+    width: 2rem;
+  }
+  
+  .container1{
+    height: 35rem;
+    margin-top: 1.6rem;
+    padding: 1.6rem;
+  }
+
+    #car{
+        height: 12rem;
+        width: 32rem;
+        margin: 1.6rem;
+        padding: 1rem;
+    }
+    #mera{
+        font-size: large;
+        margin-top: 1.6rem;
+        padding: 1rem;
+
+    }
+    #im{
+        height: 51rem;
+        
+       }
+       .hed{
+        font-size: 6rem;
+       }
+    .frnt{
+        margin-bottom: 15rem;
+        font-family: 'Times New Roman', Times, serif;
+       font-size: larger;
+      }
+
+      .container-need{
+        margin: 2.6rem;
+        padding: 1rem;
+      }
+    
+      #cmp{
+        margin: 2.6rem;
+        padding: 2rem;
+        width: 15rem;
+        font-size: larger;
+      }
+
+      #gab{
+        margin-right: 28rem;
+        
+      }
+  
+
+
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container-footer{
+        max-width: 1170px;
+      
+        margin: auto;
+      }
+      .roow{
+        display: flex;
+        flex-wrap:wrap ;
+      }
+      ul{
+        list-style: none;
+      }
+      .footer{
+        background-color: #24262b;
+        padding: 70px 0;
+      }
+      .footer-col{
+        width: 25%;
+        padding: 0 15px;
+      }
+      .footer-col h4{
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+      }
+      .footer-col h4::before{
+        content:'';
+        position: relative;
+        left: 0;
+        bottom: -10px;
+        background-color: #e91e63;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+      }
+      .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+      }
+      .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s (ease);
+      }
+      .footer-col ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+      }
+      .footer-col .social-links a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255,255,255,0.2);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s (ease);
+      }
+      .footer-col .social-llinks a:hover{
+         color: #24262b;
+         background-color: #ffffff;
+      }
+      /*responsive*/
+      @media(max-width:767px){
+        .footer-col{
+          width: 50%;
+          margin-bottom: 30px;
+        }
+      }
+      
+      @media(max-width:574px){
+        .footer-col{
+          width: 100%;
+         
+        }
+      }
+      
+      
+
+
+
+
+
+
+
+
+
+</style>
+{% endblock css %}
+{% block js %}{% endblock js %}
